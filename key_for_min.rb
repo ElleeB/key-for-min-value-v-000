@@ -2,19 +2,22 @@
 # Given a hash with numeric values, return the key for the smallest value
 
 
-name_hash = {:chair => 25, :table => 85, :mattress => 450}
+hash = {:chair => 25, :table => 85, :mattress => 450}
 
 def key_for_min_value(hash)
-  lowest_key = nil
-  lowest_value = nil
-  hash.each do |k, v|
-    if lowest_value == nil || v < lowest_value
-      lowest_value = v
-      lowest_key = k
+  lowest_key = nil # empty variable
+  lowest_value = nil # empty variable
+  hash.each do |key, value| # iterate over each key/value pair
+    if lowest_value == nil || value < lowest_value # if the lowest value is empty or if the current value is less than the lowest_value variable
+      lowest_value = value # then lowest_value = current value
+      lowest_key = key # and lowest_key = current key 
     end
   end
-  lowest_key
+  lowest_key # return the current key string
 end
+
+    
+  
 
 
 
