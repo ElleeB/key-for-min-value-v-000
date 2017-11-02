@@ -8,16 +8,16 @@ def key_for_min_value(hash)
   lowest_key = nil # empty variable
   lowest_value = nil # empty variable
   hash.each do |key, value| # iterate over each key/value pair
-    if lowest_value == nil || value < lowest_value # if the lowest value is empty or if the current value is less than the lowest_value variable
-      lowest_value = value # then lowest_value = current value
-      lowest_key = key # and lowest_key = current key 
+    if lowest_value == nil || value < lowest_value # if the lowest value is nil or if the current value is less than the lowest_value variable
+      lowest_value = value # then assign lowest_value = current value (which gets recycled above)
+      lowest_key = key # and assign lowest_key = current key (which gets recycled above)
     end
   end
   lowest_key # return the current key string
 end
 
-    
-  
+
+
 
 
 
